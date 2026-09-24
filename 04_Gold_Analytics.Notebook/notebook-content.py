@@ -370,6 +370,8 @@ gold_fact_waiting = (
         "doctor_id",
         "department_id",
         "appointment_date",
+        "appointment_hour",
+        "appointment_type",
         "arrival_time",
         "consultation_start",
         "waiting_minutes",
