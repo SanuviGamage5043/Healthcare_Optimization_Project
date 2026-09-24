@@ -114,6 +114,24 @@ table gold_fact_capacity
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column 'Utilization Band' =
+			
+			SWITCH(
+			    TRUE(),
+			    gold_fact_capacity[capacity_utilization] < 0.5,
+			        "Underutilized",
+			    gold_fact_capacity[capacity_utilization] <= 0.8,
+			        "Normal",
+			    "High Utilization"
+			)
+		lineageTag: 6d64066c-3b29-4921-a81a-01d400d892e7
+		summarizeBy: none
+		expressionContext: userContext
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
 	partition gold_fact_capacity = entity
 		mode: directLake
 		source

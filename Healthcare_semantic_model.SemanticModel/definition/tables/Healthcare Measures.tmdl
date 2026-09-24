@@ -72,6 +72,45 @@ table 'Healthcare Measures'
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 3863eb35-45a5-4ae5-8928-43bd67d7d477
 
+	measure 'Doctor Utilization' =
+			
+			DIVIDE(
+			    SUM(gold_fact_capacity[booked_slots]),
+			    SUM(gold_fact_capacity[available_slots]),
+			    0
+			)
+		lineageTag: 424f8c44-f14c-4b9a-bfe3-006b608840d6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Maximum Waiting Time' =
+			
+			MAX(gold_fact_waiting[waiting_minutes])
+		lineageTag: c3bc47e5-8702-4ce2-b7d5-9f95af261143
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Patients Waiting Over 30 Min' =
+			
+			CALCULATE(
+			    COUNTROWS(gold_fact_waiting),
+			    gold_fact_waiting[waiting_minutes] > 30
+			)
+		formatString: 0
+		lineageTag: 9c061bb0-cdf3-4ce8-b313-698cf4db03ea
+
+	measure 'Utilization Band' =
+			
+			SWITCH(
+			    TRUE(),
+			    gold_fact_capacity[capacity_utilization] < 0.5,
+			        "Underutilized",
+			    gold_fact_capacity[capacity_utilization] <= 0.8,
+			        "Normal",
+			    "High Utilization"
+			)
+		lineageTag: 5a70495f-85a7-4525-9fd0-277c70ddf0f1
+
 	column Value
 		isHidden
 		formatString: 0
