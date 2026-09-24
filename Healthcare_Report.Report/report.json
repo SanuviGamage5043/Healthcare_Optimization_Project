@@ -1,0 +1,181 @@
+{
+  "config": "{\"version\":\"5.77\",\"themeCollection\":{\"baseTheme\":{\"name\":\"Fluent2-CY26SU09\",\"type\":2,\"version\":{\"visual\":\"2.13.0\",\"report\":\"3.4.0\",\"page\":\"2.3.1\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"creationSource\":\"QuickCreate\"}",
+  "layoutOptimization": 1,
+  "pods": [
+    {
+      "boundSection": "5ee60907d01d72c300a3",
+      "config": "{}",
+      "name": "95bb18652aa462de4725"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Fluent2-CY26SU09",
+            "path": "BaseThemes/Fluent2-CY26SU09.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Hospital Overview",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 1080.00,
+      "name": "5ee60907d01d72c300a3",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"193870af8b05e9b6148c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":127.20935850098347,\"y\":653.0080403050484,\"z\":7000,\"width\":845.94223403154,\"height\":288.3412126022292,\"tabOrder\":7000}},{\"id\":1,\"position\":{\"x\":0,\"y\":795,\"z\":7000,\"width\":324,\"height\":180,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"gold_dim_department.department_name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Healthcare Measures.Total Appointments\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_department\",\"Type\":0},{\"Name\":\"h\",\"Entity\":\"Healthcare Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"department_name\"},\"Name\":\"gold_dim_department.department_name\",\"NativeReferenceName\":\"department_name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Total Appointments\"},\"Name\":\"Healthcare Measures.Total Appointments\",\"NativeReferenceName\":\"Total Appointments\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Total Appointments\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Appointments by Departments'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"subTitle\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 288.34,
+          "queryBinary": "H4sIAAAAAAAEALVUy27bMBD8lYAXX5hAcooedGvs9IEmbeoYySEwDELaSCxEUlhRbQVD/95dSq5dWQHaQwQd+NgZzuwuuRMLZ4yyWS2Sp524Bxp7nX5rANul8uq+UBUMISLZibDBgwfAWjsrkrkU79GZAP+iDIhE5EKKa6LxLU9cmW0zbbYZVAq9Aetpe91WFBl18g+oOAZ9BFX6IlUIZ7eg6gahngTl8fRRysNR/EaSsRJSH0QuXNkYyx6uf1VE3Nsg767BFFbwfJgEL10nxR26CjAccrCxtSyCdvdiTp1ejKM52OsffAwg2BQG7CnrTgzO/1VpMVa6dl6VZ++qymkbqOsjsRMZvpgAvKR3ipvS/FgACw5Ztpn2g2BqILKn6/Hss+auupTiBp59v/VftYlPisOF57WVzovAeKM9oCpDy6qygSHIawOzeTR/ex5dnsfzdRQl4Z8Rmj45MvBppKl+lU7iDAaRTP80qX22UJhpV7q8nQXAC2FLQKP8IW7TBfavmAFetUH9UiNdif0d/tvBa7QeCaCgKyq5tjnD71Ab1b8mH9A1FS33eSWi7700nkcy3gQov0cryJp0XxVeeOAakIY38pjvkU5xP/uOaujBSeIoiriuh3cr7tg0pA2z3YJHndZ9P8as9Ddi7oO0GQUAAA==",
+          "width": 845.94,
+          "x": 127.21,
+          "y": 653.01,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"33e8cceed052004a2668\",\"layouts\":[{\"id\":0,\"position\":{\"x\":973.1515925325235,\"y\":653.0080403050484,\"z\":7003,\"width\":845.94223403154,\"height\":288.3412126022292,\"tabOrder\":7003}},{\"id\":1,\"position\":{\"x\":0,\"y\":983,\"z\":7003,\"width\":324.00000000000006,\"height\":180,\"tabOrder\":7003}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"gold_dim_department.department_name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Healthcare Measures.Average Capacity Utilization\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_department\",\"Type\":0},{\"Name\":\"h\",\"Entity\":\"Healthcare Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"department_name\"},\"Name\":\"gold_dim_department.department_name\",\"NativeReferenceName\":\"department_name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Average Capacity Utilization\"},\"Name\":\"Healthcare Measures.Average Capacity Utilization\",\"NativeReferenceName\":\"Average Capacity Utilization\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Average Capacity Utilization\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Capacity by Department'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"subTitle\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 288.34,
+          "queryBinary": "H4sIAAAAAAAEALVUTU/bQBD9K9FeclmQHaoefCsJpVWhpYHCAUXRyh7srbxea7ymdSP/d2bWTp06AZUDlg/78ebNezuzuxFza4wqkkpE9xtxDTR2Ov5eAzYL5dR1pkroISLaCL/Bg1vASttCRDMpPqI1PvyrMiAikQopzojGNTyxebJOtFknUCp0BgpH2zdNSciglX+Dst2gT6Byl8UKYXIJqqoRqoNBaXg4lXKwg19JMpZD7LzIuc1rU7CHs98lEXc2yLutMYYlPAwT76VtpbhCWwL6JIONdcEiaHcrZt/p8RjNYKcfOQ0gFDH0sfusG9E7/1+l2Vjph0dAlcJkrkoV0wlNfjid6z+Un2gG2QfO+vjF0Oc8vJyPinCXAdvxNSgS7Xo71F5kXlfj2RfNPXcixQU8uG7rVZUL90rHbcFrS51mnvFCO9Kc+4ZWeQ09yGkD01kwe38UnByFs5sgiPw/pWj65MjA55Gm6k36jE/Qi2T6+4Pap3OFiba5TZupD3gGtgA0yg24VevZv2ECeNp49QuNdGG2N/xfB2/bmCSF4KdUfF2kTHSF2qju1TlHW5e03J0wUf7sRPI8kOHKh/K7tYSkjrf14YVbrgapeSd3+e4oi/3V9VZND1MUBkHAFR7et7Bl+xDXzHYJDnVcdZ0ZstInRch2nkEFAAA=",
+          "width": 845.94,
+          "x": 973.15,
+          "y": 653.01,
+          "z": 7003.00
+        },
+        {
+          "config": "{\"name\":\"3d13bed864ddb0d00bba\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1261.4928051347526,\"y\":175.97294592636047,\"z\":5000,\"width\":290.4613685772456,\"height\":161.13185410124572,\"tabOrder\":5000}},{\"id\":1,\"position\":{\"x\":166,\"y\":499,\"z\":5000,\"width\":157.99999999999997,\"height\":100,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Healthcare Measures.Average Waiting Time\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Healthcare Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Average Waiting Time\"},\"Name\":\"Healthcare Measures.Average Waiting Time\",\"NativeReferenceName\":\"Average Waiting Time\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Average Waiting Time\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"metadata\":\"Healthcare Measures.Average Waiting Time\"}}]}}}",
+          "filters": "[]",
+          "height": 161.13,
+          "queryBinary": "H4sIAAAAAAAEAJWTX2+CMBTFv4rpCy+4ACZ74G1T9yfTxamZD4aYBq7QhbakFKMxfPfdFqKGsWQjPFB6zu3v9LZnMpacU5GUJNyeyQrwW7P4owJ1mlBNVxktoJWQ8EzshPn4BFUyKUgYuORJSW7t75QDCUlGXDLFMhqV5AVorrOYKhjMgZaVghKn16cClV7tXkzprSmVebJLGN8lVEO/3O/XQ0GV5iD0jStyMVgOsbaQLYUJMT0WiNPkwPCyUjEsYX8d2DB17ZKFkgUou9bDARRNYbChTDORDtYMgVDSgvXkveu1GIdmB7MgKBAxtAX662OGTQYGGyOMpUhwssHG7mBmVnZHb8y0bOSSGex1M5VXXPw1d9rNbVth/i1ZmtmCM6YRNbfHgeYVtCKNwE7gBfdDbzT0g7XnhfZ10I2P2+F/7SCVbcR/wfo/aC8HYSfMvtZmBy2lqb/thXfGVCVM5jI9Odbwi2wCilN91UWYKsLlH3HHsWNGu1CM0+amPCtZFfi7yYWIX3gS25xeZI2Xy+TjYHqEuDKCOWjF4rLpo2+W+Ab4NNImrgMAAA==",
+          "width": 290.46,
+          "x": 1261.49,
+          "y": 175.97,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"42345d7088506e48098c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":368.90713965285204,\"y\":175.97294592636047,\"z\":2000,\"width\":303.1823044273439,\"height\":161.13185410124572,\"tabOrder\":2000}},{\"id\":1,\"position\":{\"x\":0,\"y\":391,\"z\":2000,\"width\":158,\"height\":100,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Healthcare Measures.Total Appointments\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Healthcare Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Total Appointments\"},\"Name\":\"Healthcare Measures.Total Appointments\",\"NativeReferenceName\":\"Total Appointments\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Total Appointments\"}}}]},\"columnProperties\":{\"Healthcare Measures.Total Appointments\":{\"formatString\":\"0\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"metadata\":\"Healthcare Measures.Total Appointments\"}},{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{}}}",
+          "filters": "[]",
+          "height": 161.13,
+          "queryBinary": "H4sIAAAAAAAEAJWTW2vCMBiG/4rkxps62gq76N2m7sB0OJXtQoqE9rPNaJKSpkOR/vd9SYNK18FWepHD++Z73hxOZCI5pyKtSLQ9kTVgW7PkrQZ1nFJN1zktwUlIdCJ2wjTeQVVMChKFHnlQklv7K+VAIpITj8xwGY1K8gS00HlCFQwWQKtaQYXTm2OJSr/xzqbs2pTJIt2ljO9SqqFfHvTroaRKcxD6yhV7GKyARFtIR2FCzA4l4rQ5MLysVQIr2F86NkzTeGSpZAnK1tpITYvBXVlKJmyliqDAYfWkvekxGL1mX6YYKBAJOHvf2kj/kYMBRviJFCnTDhjPBdOyqtt7Yeawxh6Zw163U0XNxV8TZ93E9hDM2IpluV1wzjQoWtiLQIsanEgzDsPQD29H/ngUhBvfj+w/RDd+Xof/uYNUuYj/gg1+0J6vwE6YXW3MDlpKs/62F344oSplspDZcWgNv8imoDjVF12MqWIsf487zkRmtEvFOG3fyKOSdYnDbS5E/MQ76HL6sTWen1GAndkBktoIFqAVS6r2HANT4htYFjWVqAMAAA==",
+          "width": 303.18,
+          "x": 368.91,
+          "y": 175.97,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"7025a34076d45c6c7951\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"width\":280,\"height\":280,\"z\":0,\"tabOrder\":0}},{\"id\":1,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":324.00000000000006,\"height\":324.00000000000006,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 280.00,
+          "width": 280.00,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"aa6224600c7b04525a09\",\"layouts\":[{\"id\":0,\"position\":{\"x\":127.20935850098347,\"y\":973.1515925325235,\"z\":7001,\"width\":655.1281962800648,\"height\":106.00779875081956,\"tabOrder\":7001}},{\"id\":1,\"position\":{\"x\":0,\"y\":1171,\"z\":7001,\"width\":324,\"height\":60.00000000000001,\"tabOrder\":7001}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_dim_department.department_name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_department\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"department_name\"},\"Name\":\"gold_dim_department.department_name\",\"NativeReferenceName\":\"department_name\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_department\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"department_name\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Cardiology'\"}}],[{\"Literal\":{\"Value\":\"'Dermatology'\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 106.01,
+          "queryBinary": "H4sIAAAAAAAEAJWSwW7CMAyG3yUXLmVqi7RDj2NsmsYmBggOE0JRaiBTk1RpslGhvvvstKgIdlnVQxz/tj87PrGxUYrrvGLZ54ktAM9Oig8Ptn7kji8OvIROwrITCw46rMBW0miWpRF7skaF8HeugGVszyI2wTSuJsMU+TaXaptDya1ToB26l3WJyriJ+qDk7yju4EK/iZCxAOFCvbEpvNKEMzmWFqqWCNsw3gqYw643AlbTRGxmTQk2FOmJtpog0HuGuYW+u1aT2MlvKgMWtIAu9iYrMq8PKOmQdS5dx4mDRa2srq1XSdMeRWwKO9e6/tVoctMpTZHu5nJ/CBmn0oHlRXhKXnjoRE4qGKRxej+MR8MkXcZxFv4BRuO3wRQPCCf1niJnVire7sOzNb7E63aPsPQXPhJSkh1vQiDt0xxyL87t08WKOoPQ7EW2NdYwP3hqCPpFi8LnMFGlq0MdTOqsh6jfwgRlkyMIT7nfwFkpqnaKCVH/ArZsHdPnAgAA",
+          "width": 655.13,
+          "x": 127.21,
+          "y": 973.15,
+          "z": 7001.00
+        },
+        {
+          "config": "{\"name\":\"b187929000ede0006695\",\"layouts\":[{\"id\":0,\"position\":{\"x\":290.4613685772456,\"y\":337.1048000276062,\"z\":6000,\"width\":1337.8184202353427,\"height\":315.90324027744225,\"tabOrder\":6000}},{\"id\":1,\"position\":{\"x\":0,\"y\":607,\"z\":6000,\"width\":324,\"height\":180,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"gold_dim_date.date\",\"active\":true}],\"Y\":[{\"queryRef\":\"Healthcare Measures.Total Appointments\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_date\",\"Type\":0},{\"Name\":\"h\",\"Entity\":\"Healthcare Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"date\"},\"Name\":\"gold_dim_date.date\",\"NativeReferenceName\":\"date\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Total Appointments\"},\"Name\":\"Healthcare Measures.Total Appointments\",\"NativeReferenceName\":\"Total Appointments\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Appointments Trend by Date'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"22D\"}}}}}],\"subTitle\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 315.90,
+          "queryBinary": "H4sIAAAAAAAEAK1UTU/jMBD9K8iXXgxKymoPuUEpu2gLgraCA6qqUTIkRv6S46yoqv53xk5KoxKk1Yooh8x43sx7T+Ns2cQoBbqoWfa8ZQukby/yhwbd5go8LCqw2JWwbMviQfh4RFcLo1k25uzaGRXhd6CQZaxknE2pjd+EwMhiXQi1LsAjHSw3lmqSHf8or/rlvxGkr3JweHKLUDcO60FQmQ4PQQvOK9S+h1pxEiYx95HkxMhG6aBh+mapfSuDtJvG5TjHl0MQtex2nN07Y9HFUVEGpfY8+vLOOo134MXf0Aod6hy70g65ZZ2wf6VQHVNYGg/y5MJaI3TUWvcIDRh4NgD4iuRQb/LvqcJAONqnC+E7wrQZ5Leoj6M/IqzLOWczfPHt0TeYTrm5KKvYcCY8OpBxFUE2e3+9UDgaJ+Ofp8n5aTpeJkkW3xGh6eFH/G+OKNX/syHpJ7YfS7jWwdVdcDCyDP2fB8mPJuAKYaQpN6MI+KLsCp0Cf6hbkaoVjb8kx4UuQ+29EwraW/rLmcZSutVFFF/pFnQ6E56uIjTc8zkWTb53JSQegwc08Qfv96MpGouZ0LgAZWVY4eDq4W+QUjB9w7wJvW7RO5HX7TKkgec7InTF1W8EAAA=",
+          "width": 1337.82,
+          "x": 290.46,
+          "y": 337.10,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"bb0cd97f9002600a3281\",\"layouts\":[{\"id\":0,\"position\":{\"x\":535.0957435167961,\"y\":41.59754896597002,\"z\":1000,\"width\":964.3068169383959,\"height\":153.15461210198052,\"tabOrder\":1000}},{\"id\":1,\"position\":{\"x\":0,\"y\":93,\"z\":1000,\"width\":324,\"height\":290,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"HOSPITAL OPERATIONS OVERVIEW\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"28pt\"}}],\"horizontalTextAlignment\":\"center\"},{\"textRuns\":[{\"value\":\"\"}]},{\"textRuns\":[{\"value\":\"Hospital Appointment & Capacity Analytics\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"28pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 153.15,
+          "width": 964.31,
+          "x": 535.10,
+          "y": 41.60,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"e05b2abd79567699e631\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1017.6748680078678,\"y\":973.1515925325235,\"z\":7002,\"width\":655.1281962800648,\"height\":82.68608302563925,\"tabOrder\":7002}},{\"id\":1,\"position\":{\"x\":0,\"y\":1239,\"z\":7002,\"width\":324,\"height\":82.68608302563925,\"tabOrder\":7002}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_dim_date.date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"date\"},\"Name\":\"gold_dim_date.date\",\"NativeReferenceName\":\"date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2026-03-11T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_date\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"date\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2026-03-12T00:00:00'\"}}}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 82.69,
+          "queryBinary": "H4sIAAAAAAAEAMVSS0vDQBD+L3NSCGKqp9y0piLSUq14kVCWzRhXsrthsisJIf/d2U2kBXsUvM3jex2+AZZWa2HKFrK3AXbIs1PyySP1d8KJ3YdocIZANkB8hOEVqVXWQLZIYEVWR/pGaIQMKkggZxnXh8XW5b5Uel8Kh/x46RvGXI5Fwm41SheZS1t7bYJw3jWE7aTNgawnic/4fliiwTgmsCXbIEWTqM2nnwDHnhez8UY49RWkkNBInKEzc4CbqiKsGGNPxPiTeHxbeSMnh6tD2rUyZ78Tn/9HquujVKI7napgzK0ypTJV0N+S0mLqxD1Z3/B56hI7fWLUDXuaLIpIfTCy9iXmunF9JPDXkcfkUKmUYXmH0gfyGh0p2T6qUMB0ZI1vH9keTLQCAAA=",
+          "width": 655.13,
+          "x": 1017.67,
+          "y": 973.15,
+          "z": 7002.00
+        },
+        {
+          "config": "{\"name\":\"f26b4e0b0d542bcd502e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":960.4306566824251,\"y\":175.97294592636047,\"z\":4000,\"width\":309.5427723523931,\"height\":169.6124780013113,\"tabOrder\":4000}},{\"id\":1,\"position\":{\"x\":0,\"y\":499,\"z\":4000,\"width\":158,\"height\":100,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Healthcare Measures.No Show Rate\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Healthcare Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"No Show Rate\"},\"Name\":\"Healthcare Measures.No Show Rate\",\"NativeReferenceName\":\"No Show Rate\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"No Show Rate\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"metadata\":\"Healthcare Measures.No Show Rate\"}}]}}}",
+          "filters": "[]",
+          "height": 169.61,
+          "queryBinary": "H4sIAAAAAAAEAJWTy26DMBBFfyXyhg2pgEhdsGyaPtQkSpOoXUQosmACrrCNjGkTRfx7xwblQanUIhbYvjNz7gw+krHknIqkJOHmSFaA35rFrxWowz3VdJXRAloJCY/EHpiPN1Alk4KEgUselOQ2fE45kJBkxCUTTKNRSZ6A5jqLqYLBDGhZKSjxeH0oUOnV7ikovQxKZZ5sE8a3CdXQL/f79VBQpTkIfREVuWgsh1hbyJbCmJjsC8RpfKB5WakYlrA7L6yZunbJQskClK01l4NVJr8GS4OGRy1Qj8+bK6lRavZpCoACEUMbeJ0PWd8zMHiIOpYiYbrFwymgN1Z2Vy/MjGbkkinsdHOUV1z81V/a9WdbbvaWLM1swinToGhux07zClqRZhycwAtuh95o6Adrzwvt62A0Pm6H/7mDVLYW/wXr/6A9DXwrTD9r00FLafJveuGdMVUJk7lMD44N+EV2D4pTfdZF6CrC8nfYcSZSo10oxmlzIx6VrArcbnwh4gf+ca1PL7KBp0vj42Kyh7gyghloxeKymaNvSnwDHTFX+JYDAAA=",
+          "width": 309.54,
+          "x": 960.43,
+          "y": 175.97,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"fd969c8d631603829015\",\"layouts\":[{\"id\":0,\"position\":{\"x\":672.089444080196,\"y\":175.97294592636047,\"z\":3000,\"width\":288.3412126022292,\"height\":169.6124780013113,\"tabOrder\":3000}},{\"id\":1,\"position\":{\"x\":162,\"y\":399,\"z\":3000,\"width\":158,\"height\":100,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Healthcare Measures.Completed Appointments\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Healthcare Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Completed Appointments\"},\"Name\":\"Healthcare Measures.Completed Appointments\",\"NativeReferenceName\":\"Completed Appointments\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Completed Appointments\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"value\":[{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"metadata\":\"Healthcare Measures.Completed Appointments\"}}]}}}",
+          "filters": "[]",
+          "height": 169.61,
+          "queryBinary": "H4sIAAAAAAAEAJVTTWvCQBD9K7KXXGJJFHrIrVX7QbVYLe1BRJZkTLZkP5hsiiL+985ugopVaEMO+/HezHszszs20FJylVUsWezYHGhtRfpWA26H3PJ5wQ20EJbsmL9wiw/ASmjFkl7IHlBLT3/lEljCChayEYWxhGRPwEtbpByhMwFe1QgVXb9vDSGjfXgg5aekXJfZKhNylXELl+HxZTwYjlaCsiesZUjGSkitF9mqcCZGG0NyGh9kXteYwgzWx403s9+HbIraAPpcVA1TgoWsc2eMFspnqxiBWmkXHN9cITmOFd8uKSCoFNoQ13KQk88CnHgyMtAqE7YV7xgcRXW+exGucf2QjWFtm6uyluqv7vNz974h7mwm8sIHHAsLyEs/FLysoQVZISHoRb3bbtTvxr33KEr8HxCbvvBM//OZpKq1+C+x8S+1h3FYKVfZvaugV+niLy6KDwYcM6FLnW8DT7gCGwJKbo+4JblaUvp7qrhQucNOUUjevJdH1LWh48YXSfyieWx9RktPPDypmDajDaS1A0zAokirpo+xS/EDA7kIVLQDAAA=",
+          "width": 288.34,
+          "x": 672.09,
+          "y": 175.97,
+          "z": 3000.00
+        }
+      ],
+      "width": 1920.00
+    },
+    {
+      "config": "{}",
+      "displayName": "No show & Appointment analysis",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 1080.00,
+      "name": "6656e0ee1005c0db0c48",
+      "ordinal": 3,
+      "visualContainers": [],
+      "width": 1920.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Waiting Time",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 1080.00,
+      "name": "ddd33fa1a9cd27a0ae70",
+      "ordinal": 1,
+      "visualContainers": [],
+      "width": 1920.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Capacity",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 1080.00,
+      "name": "ee484e0e895b94509808",
+      "ordinal": 2,
+      "visualContainers": [],
+      "width": 1920.00
+    }
+  ]
+}

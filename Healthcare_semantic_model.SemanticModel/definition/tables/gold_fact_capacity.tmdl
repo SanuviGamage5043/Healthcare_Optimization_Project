@@ -1,0 +1,123 @@
+table gold_fact_capacity
+	lineageTag: a3d890e0-cc33-4a06-b84f-dc4e87cae16b
+	sourceLineageTag: [dbo].[gold_fact_capacity]
+
+	column appointment_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9cdb6265-45ec-4347-abfb-7fd7ff534151
+		sourceLineageTag: appointment_date
+		summarizeBy: none
+		sourceColumn: appointment_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_id
+		dataType: string
+		lineageTag: bbe84816-7edc-4718-ab27-9bd941638515
+		sourceLineageTag: department_id
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column available_slots
+		dataType: int64
+		formatString: 0
+		lineageTag: 28bec6bb-08fd-4b00-9079-b428d271764d
+		sourceLineageTag: available_slots
+		summarizeBy: sum
+		sourceColumn: available_slots
+
+		annotation SummarizationSetBy = Automatic
+
+	column booked_slots
+		dataType: int64
+		formatString: 0
+		lineageTag: 70494c95-823c-4e40-aef1-095cb0be4596
+		sourceLineageTag: booked_slots
+		summarizeBy: sum
+		sourceColumn: booked_slots
+
+		annotation SummarizationSetBy = Automatic
+
+	column completed_appointments
+		dataType: int64
+		formatString: 0
+		lineageTag: f9dbb656-58f8-4a9c-8778-8fb665eb1975
+		sourceLineageTag: completed_appointments
+		summarizeBy: sum
+		sourceColumn: completed_appointments
+
+		annotation SummarizationSetBy = Automatic
+
+	column no_show_appointments
+		dataType: int64
+		formatString: 0
+		lineageTag: 44367771-6da9-4959-868e-1658888b0066
+		sourceLineageTag: no_show_appointments
+		summarizeBy: sum
+		sourceColumn: no_show_appointments
+
+		annotation SummarizationSetBy = Automatic
+
+	column cancelled_appointments
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a21eb19-3817-45c8-b200-d8686caf5c6a
+		sourceLineageTag: cancelled_appointments
+		summarizeBy: sum
+		sourceColumn: cancelled_appointments
+
+		annotation SummarizationSetBy = Automatic
+
+	column average_waiting_minutes
+		dataType: double
+		lineageTag: 90e6c512-2b5a-4c11-8aef-3af66a93c31b
+		sourceLineageTag: average_waiting_minutes
+		summarizeBy: sum
+		sourceColumn: average_waiting_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column unused_capacity
+		dataType: int64
+		formatString: 0
+		lineageTag: d8c84aa8-bf02-4735-a77b-bc6fc3caf1ec
+		sourceLineageTag: unused_capacity
+		summarizeBy: sum
+		sourceColumn: unused_capacity
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacity_utilization
+		dataType: double
+		lineageTag: b9fd02a2-12ea-4336-ade3-e0bb00f24d13
+		sourceLineageTag: capacity_utilization
+		summarizeBy: sum
+		sourceColumn: capacity_utilization
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column attendance_rate
+		dataType: double
+		lineageTag: e8c01f9c-31f0-4369-b58b-c59bde7fc0ab
+		sourceLineageTag: attendance_rate
+		summarizeBy: sum
+		sourceColumn: attendance_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition gold_fact_capacity = entity
+		mode: directLake
+		source
+			entityName: gold_fact_capacity
+			schemaName: dbo
+			expressionSource: 'DirectLake - Healthcare_Lakehouse'
+

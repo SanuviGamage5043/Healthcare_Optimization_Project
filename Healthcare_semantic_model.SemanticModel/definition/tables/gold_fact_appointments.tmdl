@@ -1,0 +1,176 @@
+table gold_fact_appointments
+	lineageTag: bafb349b-f98d-4e20-ade0-99823a06677e
+	sourceLineageTag: [dbo].[gold_fact_appointments]
+
+	column appointment_id
+		dataType: string
+		lineageTag: 4c52ffc4-ed4a-4961-b5c1-a093421836a4
+		sourceLineageTag: appointment_id
+		summarizeBy: none
+		sourceColumn: appointment_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_id
+		dataType: string
+		lineageTag: 8a9269ed-00ab-4f45-9273-ddfe5d40e494
+		sourceLineageTag: patient_id
+		summarizeBy: none
+		sourceColumn: patient_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column doctor_id
+		dataType: string
+		lineageTag: fb76bf1d-de95-4294-b133-8126db308db2
+		sourceLineageTag: doctor_id
+		summarizeBy: none
+		sourceColumn: doctor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_id
+		dataType: string
+		lineageTag: 99c75279-6f76-4b63-98a3-c42c0f999df3
+		sourceLineageTag: department_id
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column slot_id
+		dataType: string
+		lineageTag: e50a3896-1ae5-4358-a58c-deb1ca39fc63
+		sourceLineageTag: slot_id
+		summarizeBy: none
+		sourceColumn: slot_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column appointment_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 23edb7db-1e8a-45a1-8d10-98472616d470
+		sourceLineageTag: appointment_date
+		summarizeBy: none
+		sourceColumn: appointment_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column booking_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e1d72bb8-a1eb-4da0-9a30-c1250483433f
+		sourceLineageTag: booking_date
+		summarizeBy: none
+		sourceColumn: booking_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column scheduled_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e99cdaff-3293-4158-b065-f62b5efae24a
+		sourceLineageTag: scheduled_time
+		summarizeBy: none
+		sourceColumn: scheduled_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column arrival_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 81829bf0-eab4-4e33-8b07-dda2a75e413b
+		sourceLineageTag: arrival_time
+		summarizeBy: none
+		sourceColumn: arrival_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column consultation_start
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3c625b14-9fb2-490d-b437-61bccf7ca53c
+		sourceLineageTag: consultation_start
+		summarizeBy: none
+		sourceColumn: consultation_start
+
+		annotation SummarizationSetBy = Automatic
+
+	column consultation_end
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4b080050-191d-44ad-91d6-a2b203023ba4
+		sourceLineageTag: consultation_end
+		summarizeBy: none
+		sourceColumn: consultation_end
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: 4a7acc6e-5ee8-4e52-a5a6-4a5f1de1b6fa
+		sourceLineageTag: status
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column lead_time_days
+		dataType: int64
+		formatString: 0
+		lineageTag: 66af83eb-5ddc-4a6f-a34d-9028f1aa4ed6
+		sourceLineageTag: lead_time_days
+		summarizeBy: sum
+		sourceColumn: lead_time_days
+
+		annotation SummarizationSetBy = Automatic
+
+	column waiting_minutes
+		dataType: double
+		lineageTag: b4631029-eb68-495c-aeec-493a90c2bd50
+		sourceLineageTag: waiting_minutes
+		summarizeBy: sum
+		sourceColumn: waiting_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column consultation_minutes
+		dataType: double
+		lineageTag: 16943aa2-5ddc-4e10-b005-d2e10770660d
+		sourceLineageTag: consultation_minutes
+		summarizeBy: sum
+		sourceColumn: consultation_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column appointment_hour
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d0d0015-a244-47d0-82a9-73ccf6a39d50
+		sourceLineageTag: appointment_hour
+		summarizeBy: sum
+		sourceColumn: appointment_hour
+
+		annotation SummarizationSetBy = Automatic
+
+	column appointment_type
+		dataType: string
+		lineageTag: 42986f56-928a-4dfd-a88d-62287c9f2c9d
+		sourceLineageTag: appointment_type
+		summarizeBy: none
+		sourceColumn: appointment_type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_fact_appointments = entity
+		mode: directLake
+		source
+			entityName: gold_fact_appointments
+			schemaName: dbo
+			expressionSource: 'DirectLake - Healthcare_Lakehouse'
+

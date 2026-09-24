@@ -1,0 +1,99 @@
+table gold_fact_waiting
+	lineageTag: ab1fc680-68eb-4ac7-92b4-0e4f93895bf3
+	sourceLineageTag: [dbo].[gold_fact_waiting]
+
+	column appointment_id
+		dataType: string
+		lineageTag: 90967dc1-0e96-4ae0-868c-97b1bc72e3ae
+		sourceLineageTag: appointment_id
+		summarizeBy: none
+		sourceColumn: appointment_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_id
+		dataType: string
+		lineageTag: 60e0a0cb-63e2-46ce-b190-668d43795d9f
+		sourceLineageTag: patient_id
+		summarizeBy: none
+		sourceColumn: patient_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column doctor_id
+		dataType: string
+		lineageTag: 7a2e2cef-2878-4987-ac40-f1bb93314a57
+		sourceLineageTag: doctor_id
+		summarizeBy: none
+		sourceColumn: doctor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_id
+		dataType: string
+		lineageTag: ece53eac-a26e-4941-8279-5e9e62648d3c
+		sourceLineageTag: department_id
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column appointment_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c9823238-3690-4128-ba1b-4d7770cafe36
+		sourceLineageTag: appointment_date
+		summarizeBy: none
+		sourceColumn: appointment_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column arrival_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3768d01a-75bf-4de8-9588-a86a6b50fb2a
+		sourceLineageTag: arrival_time
+		summarizeBy: none
+		sourceColumn: arrival_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column consultation_start
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0eff8d94-8b3b-483a-a526-ee8edb3a5915
+		sourceLineageTag: consultation_start
+		summarizeBy: none
+		sourceColumn: consultation_start
+
+		annotation SummarizationSetBy = Automatic
+
+	column waiting_minutes
+		dataType: double
+		lineageTag: f242ce54-383c-409e-b1ad-5e616fe9550c
+		sourceLineageTag: waiting_minutes
+		summarizeBy: sum
+		sourceColumn: waiting_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column consultation_minutes
+		dataType: double
+		lineageTag: df9c33cb-08c2-4a23-8f49-4746400f2d0c
+		sourceLineageTag: consultation_minutes
+		summarizeBy: sum
+		sourceColumn: consultation_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition gold_fact_waiting = entity
+		mode: directLake
+		source
+			entityName: gold_fact_waiting
+			schemaName: dbo
+			expressionSource: 'DirectLake - Healthcare_Lakehouse'
+

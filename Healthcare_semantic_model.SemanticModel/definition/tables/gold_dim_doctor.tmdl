@@ -1,0 +1,47 @@
+table gold_dim_doctor
+	lineageTag: a66f435f-1d96-443d-a627-af53ac400d4c
+	sourceLineageTag: [dbo].[gold_dim_doctor]
+
+	column doctor_id
+		dataType: string
+		lineageTag: c3ce0203-eefd-4d8b-a6b7-10a5849ede7d
+		sourceLineageTag: doctor_id
+		summarizeBy: none
+		sourceColumn: doctor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column doctor_name
+		dataType: string
+		lineageTag: 0bb4950f-325e-4246-8957-5fea6fb0221f
+		sourceLineageTag: doctor_name
+		summarizeBy: none
+		sourceColumn: doctor_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_id
+		dataType: string
+		lineageTag: 6975c8c0-ee03-4df1-81e1-bc610e27fd86
+		sourceLineageTag: department_id
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column specialty
+		dataType: string
+		lineageTag: 3a38781b-0b08-42c3-9199-8f7a7c454d0a
+		sourceLineageTag: specialty
+		summarizeBy: none
+		sourceColumn: specialty
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_dim_doctor = entity
+		mode: directLake
+		source
+			entityName: gold_dim_doctor
+			schemaName: dbo
+			expressionSource: 'DirectLake - Healthcare_Lakehouse'
+

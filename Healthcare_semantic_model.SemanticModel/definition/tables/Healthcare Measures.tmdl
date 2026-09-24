@@ -1,0 +1,90 @@
+table 'Healthcare Measures'
+	lineageTag: 3c2e4565-3d44-4ed4-89c6-367a635b8e74
+
+	measure 'Total Appointments' = COUNTROWS(gold_fact_appointments)
+		formatString: 0
+		lineageTag: 010d236f-6d41-42b3-a240-99cca48440fe
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'No Shows' =
+			
+			CALCULATE(
+			    [Total Appointments],
+			    gold_fact_appointments[status] = "no_show"
+			)
+		formatString: 0
+		lineageTag: a7466b0f-cd2a-43c6-bb31-e89797c8f376
+
+	measure 'Completed Appointments' =
+			
+			CALCULATE(
+			    [Total Appointments],
+			    gold_fact_appointments[status] = "completed"
+			)
+		formatString: 0
+		lineageTag: 694ddee8-e548-45a8-809e-81f6edf25c05
+
+	measure 'Cancelled Appointments' =
+			
+			CALCULATE(
+			    [Total Appointments],
+			    gold_fact_appointments[status] = "cancelled"
+			)
+		formatString: 0
+		lineageTag: 1fff9677-8f63-4e14-86c7-391723b235b7
+
+	measure 'No Show Rate' =
+			
+			DIVIDE(
+			    [No Shows],
+			    [Total Appointments],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 6b407a6f-a584-484a-894e-e276f37e7daa
+
+	measure 'Cancellation Rate' =
+			
+			DIVIDE(
+			    [Cancelled Appointments],
+			    [Total Appointments],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 8c51d4ba-64e2-4cb1-b54d-750901fc7e66
+
+	measure 'Average Waiting Time' =
+			
+			AVERAGE(gold_fact_waiting[waiting_minutes])
+		formatString: 0.0
+		lineageTag: b26af565-bb46-4e3a-aa77-e18aa49bb988
+
+	measure 'Average Consultation Time' =
+			
+			AVERAGE(gold_fact_waiting[consultation_minutes])
+		formatString: 0.0
+		lineageTag: 5bc1bd80-cd2c-4730-b967-5b770e22cdbe
+
+	measure 'Average Capacity Utilization' =
+			
+			AVERAGE(gold_fact_capacity[capacity_utilization])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 3863eb35-45a5-4ae5-8928-43bd67d7d477
+
+	column Value
+		isHidden
+		formatString: 0
+		lineageTag: 2baa2120-cfbc-4225-a62e-cad3be57580d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Healthcare Measures' = calculated
+		mode: import
+		source = { 1 }
+
+	annotation PBI_Id = 205a499cf1194796a9633b78e31ecbbb
+

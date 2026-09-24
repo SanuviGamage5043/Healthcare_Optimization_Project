@@ -1,0 +1,40 @@
+relationship 9edaa0cb-75f1-02f5-e8da-44f6625da5b8
+	fromColumn: gold_fact_appointments.patient_id
+	toColumn: gold_dim_patient.patient_id
+
+relationship 1bbc4a51-739c-0e83-20d4-bb5102129df5
+	fromColumn: gold_fact_appointments.doctor_id
+	toColumn: gold_dim_doctor.doctor_id
+
+relationship 554e0d96-784c-695d-3ef1-95a4697964c4
+	fromColumn: gold_fact_appointments.department_id
+	toColumn: gold_dim_department.department_id
+
+relationship 6fed2314-8e9d-97ab-e350-5ce3cffa4169
+	fromColumn: gold_fact_appointments.appointment_date
+	toColumn: gold_dim_date.date
+
+relationship d8b305eb-cf1b-d390-91f9-19db5e0b3123
+	fromColumn: gold_fact_waiting.patient_id
+	toColumn: gold_dim_patient.patient_id
+
+relationship 71d5830e-213d-5de5-794f-5c275e7a62c0
+	fromColumn: gold_fact_waiting.doctor_id
+	toColumn: gold_dim_doctor.doctor_id
+
+relationship 84d1aa8e-c707-50a7-f565-1805831deff2
+	fromColumn: gold_fact_waiting.department_id
+	toColumn: gold_dim_department.department_id
+
+relationship e62dac36-c5eb-e5ad-931e-abd7028b12a7
+	fromColumn: gold_fact_waiting.appointment_date
+	toColumn: gold_dim_date.date
+
+relationship cfc427b1-fb66-e99f-c7d5-218eac96e1a7
+	fromColumn: gold_fact_capacity.department_id
+	toColumn: gold_dim_department.department_id
+
+relationship a3668c6b-0f6b-8257-f7a8-0b3f88e46e96
+	fromColumn: gold_fact_capacity.appointment_date
+	toColumn: gold_dim_date.date
+

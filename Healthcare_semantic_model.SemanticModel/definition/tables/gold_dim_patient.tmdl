@@ -1,0 +1,48 @@
+table gold_dim_patient
+	lineageTag: 48eea5db-1155-4808-863e-618b790e556e
+	sourceLineageTag: [dbo].[gold_dim_patient]
+
+	column patient_id
+		dataType: string
+		lineageTag: 302d6333-4094-4618-b14a-6de12f970750
+		sourceLineageTag: patient_id
+		summarizeBy: none
+		sourceColumn: patient_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_name
+		dataType: string
+		lineageTag: d37f7729-ea13-42da-bcc9-d54a0ada5fc7
+		sourceLineageTag: patient_name
+		summarizeBy: none
+		sourceColumn: patient_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender
+		dataType: string
+		lineageTag: 90999531-0245-4aa7-a9fc-9dc2d84d911a
+		sourceLineageTag: gender
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_of_birth
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4dc77a82-5744-4361-8139-89eee223e86b
+		sourceLineageTag: date_of_birth
+		summarizeBy: none
+		sourceColumn: date_of_birth
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_dim_patient = entity
+		mode: directLake
+		source
+			entityName: gold_dim_patient
+			schemaName: dbo
+			expressionSource: 'DirectLake - Healthcare_Lakehouse'
+
