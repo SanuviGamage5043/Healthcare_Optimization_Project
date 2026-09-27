@@ -1,0 +1,149 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "57965e3a4aca26895a46",
+  "position": {
+    "x": 975.27174850753988,
+    "y": 226.85668932675384,
+    "z": 3,
+    "height": 216,
+    "width": 912,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_dim_department"
+                    }
+                  },
+                  "Property": "department_name"
+                }
+              },
+              "queryRef": "gold_dim_department.department_name",
+              "nativeQueryRef": "department_name",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Healthcare Measures"
+                    }
+                  },
+                  "Property": "No Show Rate"
+                }
+              },
+              "queryRef": "Healthcare Measures.No Show Rate",
+              "nativeQueryRef": "No Show Rate"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Healthcare Measures"
+                  }
+                },
+                "Property": "No Show Rate"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'No Show Rate by Department'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7688b7b0c6890de10b57",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_dim_department"
+              }
+            },
+            "Property": "department_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9006a46070b79cd70042",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Healthcare Measures"
+              }
+            },
+            "Property": "No Show Rate"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "b67337e92c2bdd60d7b6",
+  "position": {
+    "x": 975.27174850753988,
+    "y": 468.55447047862242,
+    "z": 5,
+    "height": 216,
+    "width": 912,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_fact_appointments"
+                    }
+                  },
+                  "Property": "appointment_type"
+                }
+              },
+              "queryRef": "gold_fact_appointments.appointment_type",
+              "nativeQueryRef": "appointment_type",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Healthcare Measures"
+                    }
+                  },
+                  "Property": "No Show Rate"
+                }
+              },
+              "queryRef": "Healthcare Measures.No Show Rate",
+              "nativeQueryRef": "No Show Rate"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Healthcare Measures"
+                  }
+                },
+                "Property": "No Show Rate"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'No Show Rate by Appointment Type'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6b3a4840c3891b30a4c5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_fact_appointments"
+              }
+            },
+            "Property": "appointment_type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "004b366a224232aa5e25",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Healthcare Measures"
+              }
+            },
+            "Property": "No Show Rate"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

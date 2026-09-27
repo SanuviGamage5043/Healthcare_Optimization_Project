@@ -1,0 +1,142 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "30228cd751c2aec4c777",
+  "position": {
+    "x": 63.604679250491735,
+    "y": 468.55447047862242,
+    "z": 4,
+    "height": 216,
+    "width": 912,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_fact_appointments"
+                    }
+                  },
+                  "Property": "appointment_type"
+                }
+              },
+              "queryRef": "gold_fact_appointments.appointment_type",
+              "nativeQueryRef": "appointment_type",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Healthcare Measures"
+                    }
+                  },
+                  "Property": "No Shows"
+                }
+              },
+              "queryRef": "Healthcare Measures.No Shows",
+              "nativeQueryRef": "No Shows"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Healthcare Measures"
+                  }
+                },
+                "Property": "No Shows"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'No Shows by Appointment Type'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8e0425eb292111dbb5e7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_fact_appointments"
+              }
+            },
+            "Property": "appointment_type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "10595072cd0dcdc53d20",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Healthcare Measures"
+              }
+            },
+            "Property": "No Shows"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

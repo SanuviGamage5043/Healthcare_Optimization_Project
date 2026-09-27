@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "77a7a7946d24042cc71c",
   "position": {
-    "x": 540.63977362917979,
+    "x": 720.853031505573,
     "y": 23.3217157251803,
     "z": 0,
     "height": 74.205459125573682,
-    "width": 928.62831705717929,
+    "width": 549.12039752924534,
     "tabOrder": 0
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "CAPACITY & RESOURCE UTILIZATION",
+                    "value": "NO-SHOW ANALYTICS",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "36pt"
