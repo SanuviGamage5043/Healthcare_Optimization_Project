@@ -20,4 +20,5 @@ ref table gold_fact_appointments
 ref table gold_fact_capacity
 ref table gold_dim_patient
 ref table 'Healthcare Measures'
+ref table gold_fact_doctor_capacity
 

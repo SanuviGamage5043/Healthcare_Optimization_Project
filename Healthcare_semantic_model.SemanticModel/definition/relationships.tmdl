@@ -38,3 +38,15 @@ relationship a3668c6b-0f6b-8257-f7a8-0b3f88e46e96
 	fromColumn: gold_fact_capacity.appointment_date
 	toColumn: gold_dim_date.date
 
+relationship dfd2b1e9-a373-678d-c2a8-b36de9ea36ff
+	fromColumn: gold_fact_doctor_capacity.doctor_id
+	toColumn: gold_dim_doctor.doctor_id
+
+relationship a46de5d4-307f-8fd8-30ce-a6da075cc476
+	fromColumn: gold_fact_doctor_capacity.department_id
+	toColumn: gold_dim_department.department_id
+
+relationship 02f49b47-bac7-aa9b-cffa-6b656c65b6a5
+	fromColumn: gold_fact_doctor_capacity.appointment_date
+	toColumn: gold_dim_date.date
+

@@ -1,0 +1,70 @@
+table gold_fact_doctor_capacity
+	lineageTag: c34b61bb-41eb-4a9c-88d3-6eb372351f9b
+	sourceLineageTag: [dbo].[gold_fact_doctor_capacity]
+
+	column doctor_id
+		dataType: string
+		lineageTag: c8e809ed-78b0-4452-9658-a8cb6964871a
+		sourceLineageTag: doctor_id
+		summarizeBy: none
+		sourceColumn: doctor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_id
+		dataType: string
+		lineageTag: bd53568b-50db-46c8-8391-0bde91b1a726
+		sourceLineageTag: department_id
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column appointment_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5dacdcd4-4dcd-4e96-9636-5e33e141ab96
+		sourceLineageTag: appointment_date
+		summarizeBy: none
+		sourceColumn: appointment_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column available_slots
+		dataType: int64
+		formatString: 0
+		lineageTag: 1bbe79cb-ef33-465a-b5d2-b4bb3c613372
+		sourceLineageTag: available_slots
+		summarizeBy: sum
+		sourceColumn: available_slots
+
+		annotation SummarizationSetBy = Automatic
+
+	column booked_slots
+		dataType: int64
+		formatString: 0
+		lineageTag: 63bd2ab4-81a7-4da8-be29-f087f8584abc
+		sourceLineageTag: booked_slots
+		summarizeBy: sum
+		sourceColumn: booked_slots
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacity_utilization
+		dataType: double
+		lineageTag: 9188dbaa-a0ee-4b88-b7d5-81e222c34e26
+		sourceLineageTag: capacity_utilization
+		summarizeBy: sum
+		sourceColumn: capacity_utilization
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition gold_fact_doctor_capacity = entity
+		mode: directLake
+		source
+			entityName: gold_fact_doctor_capacity
+			schemaName: dbo
+			expressionSource: 'DirectLake - Healthcare_Lakehouse'
+

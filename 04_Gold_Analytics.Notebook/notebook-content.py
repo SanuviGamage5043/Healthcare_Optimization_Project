@@ -587,6 +587,146 @@ gold_fact_capacity = (
 
 # CELL ********************
 
+doctor_available = (
+    slots
+    .groupBy(
+        "doctor_id",
+        "department_id",
+        "slot_date"
+    )
+    .agg(
+        F.count("slot_id").alias("available_slots")
+    )
+)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+doctor_booked = (
+    appointments
+    .filter(
+        F.col("status").isin(
+            ["completed", "no_show"]
+        )
+    )
+    .groupBy(
+        "doctor_id",
+        "department_id",
+        "appointment_date"
+    )
+    .agg(
+        F.count("appointment_id").alias("booked_slots")
+    )
+)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+doctor_capacity = (
+    doctor_available
+    .join(
+        doctor_booked,
+        (
+            (doctor_available.doctor_id == doctor_booked.doctor_id)
+            &
+            (
+                doctor_available.department_id
+                == doctor_booked.department_id
+            )
+            &
+            (
+                doctor_available.slot_date
+                == doctor_booked.appointment_date
+            )
+        ),
+        "left"
+    )
+)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+gold_fact_doctor_capacity = (
+    doctor_capacity
+    .select(
+        doctor_available.doctor_id,
+        doctor_available.department_id,
+        doctor_available.slot_date.alias("appointment_date"),
+        doctor_available.available_slots,
+        F.coalesce(
+            doctor_booked.booked_slots,
+            F.lit(0)
+        ).alias("booked_slots")
+    )
+)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+gold_fact_doctor_capacity = (
+    gold_fact_doctor_capacity
+    .withColumn(
+        "capacity_utilization",
+        F.when(
+            F.col("available_slots") > 0,
+            F.col("booked_slots")
+            / F.col("available_slots")
+        ).otherwise(0)
+    )
+)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+(
+    gold_fact_doctor_capacity.write
+    .format("delta")
+    .mode("overwrite")
+    .option("overwriteSchema", "true")
+    .saveAsTable(
+        "gold_fact_doctor_capacity"
+    )
+)
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
 GOLD_TABLES = [
     "gold_fact_appointments",
     "gold_fact_waiting",
@@ -594,7 +734,8 @@ GOLD_TABLES = [
     "gold_dim_patient",
     "gold_dim_doctor",
     "gold_dim_department",
-    "gold_dim_date"
+    "gold_dim_date",
+    "gold_fact_doctor_capacity"
 ]
 
 for table in GOLD_TABLES:
@@ -623,7 +764,8 @@ for table in [
     "gold_dim_patient",
     "gold_dim_doctor",
     "gold_dim_department",
-    "gold_dim_date"
+    "gold_dim_date",
+    "gold_fact_doctor_capacity"
 ]:
     print(f"\n{table}")
     spark.table(table).show(5)

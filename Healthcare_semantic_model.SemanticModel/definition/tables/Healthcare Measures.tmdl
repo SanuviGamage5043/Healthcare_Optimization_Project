@@ -75,8 +75,8 @@ table 'Healthcare Measures'
 	measure 'Doctor Utilization' =
 			
 			DIVIDE(
-			    SUM(gold_fact_capacity[booked_slots]),
-			    SUM(gold_fact_capacity[available_slots]),
+			    SUM(gold_fact_doctor_capacity[booked_slots]),
+			    SUM(gold_fact_doctor_capacity[available_slots]),
 			    0
 			)
 		lineageTag: 424f8c44-f14c-4b9a-bfe3-006b608840d6
@@ -110,6 +110,35 @@ table 'Healthcare Measures'
 			    "High Utilization"
 			)
 		lineageTag: 5a70495f-85a7-4525-9fd0-277c70ddf0f1
+
+	measure 'Total Available Slots' =
+			
+			SUM(gold_fact_capacity[available_slots])
+		formatString: 0
+		lineageTag: 0395cb47-91d4-480e-a80f-40282176b435
+
+	measure 'Total Booked Slots' =
+			
+			SUM(gold_fact_capacity[booked_slots])
+		formatString: 0
+		lineageTag: 9c37f436-2a44-4201-ad3d-257ce6e13141
+
+	measure 'Unused Slots' =
+			
+			[Total Available Slots] - [Total Booked Slots]
+		formatString: 0
+		lineageTag: 7dee046d-25e5-4c07-a8dc-82c0acf73fb6
+
+	measure 'Capacity Utilization' =
+			
+			DIVIDE(
+			    [Total Booked Slots],
+			    [Total Available Slots],
+			    0
+			)
+		lineageTag: fe9a3204-e526-4255-b6c1-3875c0109fe9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Value
 		isHidden
