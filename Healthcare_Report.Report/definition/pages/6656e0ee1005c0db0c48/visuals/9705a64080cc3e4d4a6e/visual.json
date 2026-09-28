@@ -4,10 +4,10 @@
   "position": {
     "x": 487.63587425376994,
     "y": 971.03143655750716,
-    "z": 9,
+    "z": 9000,
     "height": 76.325615100590085,
     "width": 288.34121260222918,
-    "tabOrder": 9
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -76,23 +76,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "24420e7fe4a336b2052c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_dim_doctor"
-              }
-            },
-            "Property": "doctor_name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

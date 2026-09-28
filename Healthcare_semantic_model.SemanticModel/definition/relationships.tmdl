@@ -50,3 +50,15 @@ relationship 02f49b47-bac7-aa9b-cffa-6b656c65b6a5
 	fromColumn: gold_fact_doctor_capacity.appointment_date
 	toColumn: gold_dim_date.date
 
+relationship 28e38285-f5c1-c464-cfc8-4f29c25b5506
+	fromColumn: gold_ml_no_show_predictions.department_id
+	toColumn: gold_dim_department.department_id
+
+relationship 90d31e32-8537-9cb7-4ee6-f1bdcac8a3ec
+	fromColumn: gold_ml_no_show_predictions.appointment_date
+	toColumn: gold_dim_date.date
+
+relationship eea41407-e341-635f-81b2-fef1a0281aaf
+	fromColumn: gold_ml_no_show_predictions.patient_id
+	toColumn: gold_dim_patient.patient_id
+

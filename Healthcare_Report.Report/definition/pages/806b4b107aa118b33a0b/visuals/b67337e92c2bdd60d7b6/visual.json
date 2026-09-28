@@ -4,10 +4,10 @@
   "position": {
     "x": 975.27174850753988,
     "y": 468.55447047862242,
-    "z": 5,
+    "z": 5000,
     "height": 216,
     "width": 912,
-    "tabOrder": 5
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -106,37 +106,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6b3a4840c3891b30a4c5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_fact_appointments"
-              }
-            },
-            "Property": "appointment_type"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "004b366a224232aa5e25",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Healthcare Measures"
-              }
-            },
-            "Property": "No Show Rate"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -4,10 +4,10 @@
   "position": {
     "x": 133.56982642603265,
     "y": 718.73287553055661,
-    "z": 6,
+    "z": 6000,
     "height": 233.21715725180303,
     "width": 1666.4425963628835,
-    "tabOrder": 6
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "columnChart",
@@ -131,51 +131,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "cdad5ef6ebddb16dd7d0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_dim_department"
-              }
-            },
-            "Property": "department_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "9e7704970e0545d63e27",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Healthcare Measures"
-              }
-            },
-            "Property": "Total Appointments"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a32b3d6c72c7eb0210e8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_fact_appointments"
-              }
-            },
-            "Property": "appointment_type"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

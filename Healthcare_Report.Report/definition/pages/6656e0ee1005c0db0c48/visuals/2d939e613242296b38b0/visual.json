@@ -4,10 +4,10 @@
   "position": {
     "x": 1333.57810828531,
     "y": 971.03143655750716,
-    "z": 8,
+    "z": 8000,
     "height": 95.4070188757376,
     "width": 508.83743400393388,
-    "tabOrder": 8
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -81,23 +81,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "60301c7090e25bb909b4",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_dim_date"
-              }
-            },
-            "Property": "date"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

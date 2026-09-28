@@ -4,10 +4,10 @@
   "position": {
     "x": 146.29076227613098,
     "y": 924.38800510714657,
-    "z": 4002,
+    "z": 6000,
     "height": 76.325615100590085,
     "width": 288.34121260222918,
-    "tabOrder": 4002
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "slicer",
@@ -81,23 +81,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a5b9a67bd1d20cb9e815",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_dim_department"
-              }
-            },
-            "Property": "department_name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

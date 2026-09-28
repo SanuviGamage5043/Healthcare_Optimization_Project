@@ -4,10 +4,10 @@
   "position": {
     "x": 975.27174850753988,
     "y": 226.85668932675384,
-    "z": 3,
+    "z": 3000,
     "height": 216,
     "width": 912,
-    "tabOrder": 3
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -113,37 +113,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7688b7b0c6890de10b57",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_dim_department"
-              }
-            },
-            "Property": "department_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "9006a46070b79cd70042",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Healthcare Measures"
-              }
-            },
-            "Property": "No Show Rate"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

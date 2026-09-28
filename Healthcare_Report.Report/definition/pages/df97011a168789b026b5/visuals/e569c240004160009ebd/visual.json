@@ -1,0 +1,248 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "e569c240004160009ebd",
+  "position": {
+    "x": 106.00779875081956,
+    "y": 116.60857862590152,
+    "z": 1000,
+    "height": 89.046550950688427,
+    "width": 1706.7255598881948,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Healthcare Measures"
+                    }
+                  },
+                  "Property": "Total Predictions"
+                }
+              },
+              "queryRef": "Healthcare Measures.Total Predictions",
+              "nativeQueryRef": "Total Predictions"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Healthcare Measures"
+                    }
+                  },
+                  "Property": "High Risk Appointments"
+                }
+              },
+              "queryRef": "Healthcare Measures.High Risk Appointments",
+              "nativeQueryRef": "High Risk Appointments"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Healthcare Measures"
+                    }
+                  },
+                  "Property": "Average Predicted Risk"
+                }
+              },
+              "queryRef": "Healthcare Measures.Average Predicted Risk",
+              "nativeQueryRef": "Average Predicted Risk"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Healthcare Measures"
+                    }
+                  },
+                  "Property": "No Show Rate"
+                }
+              },
+              "queryRef": "Healthcare Measures.No Show Rate",
+              "nativeQueryRef": "No Show Rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Healthcare Measures"
+                    }
+                  },
+                  "Property": "Selected ML Model"
+                }
+              },
+              "queryRef": "Healthcare Measures.Selected ML Model",
+              "nativeQueryRef": "Selected ML Model"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Healthcare Measures"
+                  }
+                },
+                "Property": "Total Predictions"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Healthcare Measures.Total Predictions"
+          }
+        },
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Healthcare Measures.High Risk Appointments"
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7a5d7e67016945672782",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Healthcare Measures"
+              }
+            },
+            "Property": "Total Predictions"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "28410d86ea313ccd9131",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Healthcare Measures"
+              }
+            },
+            "Property": "High Risk Appointments"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e5aba489cb00eac07bdb",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Healthcare Measures"
+              }
+            },
+            "Property": "Average Predicted Risk"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "34a5d6d429861dc2ebc3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Healthcare Measures"
+              }
+            },
+            "Property": "No Show Rate"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "acc3c142415097db9840",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Healthcare Measures"
+              }
+            },
+            "Property": "Selected ML Model"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -4,10 +4,10 @@
   "position": {
     "x": 979.51206045757272,
     "y": 591.5235170295731,
-    "z": 4001,
+    "z": 5000,
     "height": 265,
     "width": 901,
-    "tabOrder": 4001
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "lineChart",
@@ -113,37 +113,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "86f3f672c10142a52467",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_dim_date"
-              }
-            },
-            "Property": "date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4e7e6d527640b000e15e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Healthcare Measures"
-              }
-            },
-            "Property": "Capacity Utilization"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

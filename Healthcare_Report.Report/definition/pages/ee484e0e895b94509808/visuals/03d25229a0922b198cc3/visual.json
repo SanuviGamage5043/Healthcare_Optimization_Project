@@ -113,37 +113,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1cc1b180692d6c555c8c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_dim_department"
-              }
-            },
-            "Property": "department_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "aacbd3e83ea3bde06538",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Healthcare Measures"
-              }
-            },
-            "Property": "Capacity Utilization"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -140,6 +140,45 @@ table 'Healthcare Measures'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Total Predictions' =
+			
+			COUNTROWS(
+			    gold_ml_no_show_predictions
+			)
+		formatString: 0
+		lineageTag: 954075bc-e933-4e49-b1a7-ba30c2abcef2
+
+	measure 'High Risk Appointments' =
+			
+			CALCULATE(
+			    [Total Predictions],
+			    gold_ml_no_show_predictions[risk_category] = "High"
+			)
+		formatString: 0
+		lineageTag: d7781557-685d-4de4-be92-79381c3eccdd
+
+	measure 'Average Predicted Risk' =
+			
+			AVERAGE(
+			    gold_ml_no_show_predictions[no_show_probability]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 720913a5-d3ef-45e6-9c33-b63706dcf727
+
+	measure 'Predicted No Shows' =
+			
+			CALCULATE(
+			    [Total Predictions],
+			    gold_ml_no_show_predictions[predicted_no_show] = 1
+			)
+		formatString: 0
+		lineageTag: cf14ea83-622f-4715-b630-890996e8d529
+
+	measure 'Selected ML Model' =
+			
+			"Random Forest"
+		lineageTag: 006d2386-9503-4d46-a2e6-5ce5dc5a86a6
+
 	column Value
 		isHidden
 		formatString: 0

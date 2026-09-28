@@ -1,0 +1,75 @@
+table ml_model_evaluation
+	lineageTag: 7614d9f1-72c1-43f9-ae0e-e45eb27e0d64
+	sourceLineageTag: [dbo].[ml_model_evaluation]
+
+	column model_name
+		dataType: string
+		lineageTag: f931d2ef-f19c-4f03-81c2-3c0c695061e5
+		sourceLineageTag: model_name
+		summarizeBy: none
+		sourceColumn: model_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column accuracy
+		dataType: double
+		lineageTag: d748b464-cdf2-44c6-99b0-86aee6c52753
+		sourceLineageTag: accuracy
+		summarizeBy: sum
+		sourceColumn: accuracy
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column precision
+		dataType: double
+		lineageTag: ff46e252-720b-470b-b715-aa67b2108fa6
+		sourceLineageTag: precision
+		summarizeBy: sum
+		sourceColumn: precision
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column recall
+		dataType: double
+		lineageTag: c55d3d20-5910-4d65-9cbf-3c19df2ba2db
+		sourceLineageTag: recall
+		summarizeBy: sum
+		sourceColumn: recall
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column f1_score
+		dataType: double
+		lineageTag: 6c4ddfb4-070e-432f-bdb5-83820cce6530
+		sourceLineageTag: f1_score
+		summarizeBy: sum
+		sourceColumn: f1_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column roc_auc
+		dataType: double
+		lineageTag: 8492ef51-e17f-4e4e-a273-985ede5e4fad
+		sourceLineageTag: roc_auc
+		summarizeBy: sum
+		sourceColumn: roc_auc
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition ml_model_evaluation = entity
+		mode: directLake
+		source
+			entityName: ml_model_evaluation
+			schemaName: dbo
+			expressionSource: 'DirectLake - Healthcare_Lakehouse'
+

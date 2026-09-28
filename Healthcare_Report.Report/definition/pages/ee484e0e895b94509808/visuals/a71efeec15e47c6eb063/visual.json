@@ -113,37 +113,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7a0c6cffa86cee8cbe30",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_dim_doctor"
-              }
-            },
-            "Property": "doctor_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "cfd0cc4387ec3000063a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Healthcare Measures"
-              }
-            },
-            "Property": "Doctor Utilization"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

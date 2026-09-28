@@ -1,0 +1,125 @@
+table gold_ml_no_show_predictions
+	lineageTag: a98ac4f2-7e76-4274-b6f1-bdc20c37a5ac
+	sourceLineageTag: [dbo].[gold_ml_no_show_predictions]
+
+	column appointment_id
+		dataType: string
+		lineageTag: 35ed94bb-6467-463f-8b9f-b18010eb0aea
+		sourceLineageTag: appointment_id
+		summarizeBy: none
+		sourceColumn: appointment_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column patient_id
+		dataType: string
+		lineageTag: a74a4e62-dd3f-4206-8841-3e0bfc26bd12
+		sourceLineageTag: patient_id
+		summarizeBy: none
+		sourceColumn: patient_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column appointment_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a3369611-75bd-46f0-a639-939c031f5547
+		sourceLineageTag: appointment_date
+		summarizeBy: none
+		sourceColumn: appointment_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_id
+		dataType: string
+		lineageTag: 9317108a-6e80-4695-b5f4-723a745066e1
+		sourceLineageTag: department_id
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column appointment_type
+		dataType: string
+		lineageTag: 3aaa95cb-f06a-4965-8627-93511ebca442
+		sourceLineageTag: appointment_type
+		summarizeBy: none
+		sourceColumn: appointment_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column appointment_hour
+		dataType: int64
+		formatString: 0
+		lineageTag: bb9cf223-8135-4242-a955-54ffddcec77c
+		sourceLineageTag: appointment_hour
+		summarizeBy: sum
+		sourceColumn: appointment_hour
+
+		annotation SummarizationSetBy = Automatic
+
+	column no_show_probability
+		dataType: double
+		lineageTag: 7f43498c-680d-4fad-9940-f0ba74899d7d
+		sourceLineageTag: no_show_probability
+		summarizeBy: sum
+		sourceColumn: no_show_probability
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column predicted_no_show
+		dataType: int64
+		formatString: 0
+		lineageTag: 614b3beb-a0c0-4808-95ed-4acac62ea0fd
+		sourceLineageTag: predicted_no_show
+		summarizeBy: sum
+		sourceColumn: predicted_no_show
+
+		annotation SummarizationSetBy = Automatic
+
+	column prediction_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a6107ca6-33f3-4e38-810b-a91863b052fb
+		sourceLineageTag: prediction_date
+		summarizeBy: none
+		sourceColumn: prediction_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column model_name
+		dataType: string
+		lineageTag: 1c30316a-e4eb-4a14-948c-931bc879a222
+		sourceLineageTag: model_name
+		summarizeBy: none
+		sourceColumn: model_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column model_version
+		dataType: string
+		lineageTag: 011b9111-2187-4142-8582-1a5b1e64bd02
+		sourceLineageTag: model_version
+		summarizeBy: none
+		sourceColumn: model_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column risk_category
+		dataType: string
+		lineageTag: cd19d1c9-96f5-40d9-9532-041ef6e7cb56
+		sourceLineageTag: risk_category
+		summarizeBy: none
+		sourceColumn: risk_category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_ml_no_show_predictions = entity
+		mode: directLake
+		source
+			entityName: gold_ml_no_show_predictions
+			schemaName: dbo
+			expressionSource: 'DirectLake - Healthcare_Lakehouse'
+

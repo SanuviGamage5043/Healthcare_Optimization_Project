@@ -4,10 +4,10 @@
   "position": {
     "x": 976,
     "y": 717,
-    "z": 7,
+    "z": 7000,
     "height": 216,
     "width": 911,
-    "tabOrder": 7
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "lineChart",
@@ -106,37 +106,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8b1db2571c53c8929590",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_dim_date"
-              }
-            },
-            "Property": "date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "195654af0558a0deb5bb",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Healthcare Measures"
-              }
-            },
-            "Property": "No Shows"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

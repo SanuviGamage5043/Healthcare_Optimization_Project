@@ -1,0 +1,283 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "f0511144b62403886571",
+  "position": {
+    "x": 489.75603022878636,
+    "y": 814.13989440629416,
+    "z": 2005,
+    "height": 188.6938817764588,
+    "width": 907.42675730701535,
+    "tabOrder": 2005
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_ml_no_show_predictions"
+                    }
+                  },
+                  "Property": "appointment_id"
+                }
+              },
+              "queryRef": "gold_ml_no_show_predictions.appointment_id",
+              "nativeQueryRef": "Appointment ID",
+              "displayName": "Appointment ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_ml_no_show_predictions"
+                    }
+                  },
+                  "Property": "appointment_date"
+                }
+              },
+              "queryRef": "gold_ml_no_show_predictions.appointment_date",
+              "nativeQueryRef": "Appointment Date",
+              "displayName": "Appointment Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_dim_department"
+                    }
+                  },
+                  "Property": "department_name"
+                }
+              },
+              "queryRef": "gold_dim_department.department_name",
+              "nativeQueryRef": "Department Name",
+              "displayName": "Department Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_ml_no_show_predictions"
+                    }
+                  },
+                  "Property": "appointment_type"
+                }
+              },
+              "queryRef": "gold_ml_no_show_predictions.appointment_type",
+              "nativeQueryRef": "Appointment Type",
+              "displayName": "Appointment Type"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_ml_no_show_predictions"
+                        }
+                      },
+                      "Property": "appointment_hour"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(gold_ml_no_show_predictions.appointment_hour)",
+              "nativeQueryRef": "Appointment Hour",
+              "displayName": "Appointment Hour"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_ml_no_show_predictions"
+                        }
+                      },
+                      "Property": "no_show_probability"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(gold_ml_no_show_predictions.no_show_probability)",
+              "nativeQueryRef": "No Show Probability",
+              "displayName": "No Show Probability"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_ml_no_show_predictions"
+                    }
+                  },
+                  "Property": "risk_category"
+                }
+              },
+              "queryRef": "gold_ml_no_show_predictions.risk_category",
+              "nativeQueryRef": "Risk Category",
+              "displayName": "Risk Category"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "gold_ml_no_show_predictions"
+                  }
+                },
+                "Property": "appointment_type"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a3eeb8c5c14de27270c3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_ml_no_show_predictions"
+              }
+            },
+            "Property": "appointment_id"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b87aea4ad68d4c52566c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_ml_no_show_predictions"
+              }
+            },
+            "Property": "appointment_date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d001ed54302871b7342a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_dim_department"
+              }
+            },
+            "Property": "department_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fbef4fc6b3d8c078cad9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_ml_no_show_predictions"
+              }
+            },
+            "Property": "appointment_type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f5d39c3fcd4568040bb7",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "gold_ml_no_show_predictions"
+                  }
+                },
+                "Property": "appointment_hour"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5ded34760e5486a60547",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "gold_ml_no_show_predictions"
+                  }
+                },
+                "Property": "no_show_probability"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3ec2e5b0d1c2e0078314",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_ml_no_show_predictions"
+              }
+            },
+            "Property": "risk_category"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

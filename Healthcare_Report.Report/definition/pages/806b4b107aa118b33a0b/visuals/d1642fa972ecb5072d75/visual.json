@@ -4,10 +4,10 @@
   "position": {
     "x": 222.61637737672106,
     "y": 97.527174850754,
-    "z": 1,
+    "z": 1000,
     "height": 112.36826667586872,
     "width": 1503.1905862866213,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -135,65 +135,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "96b19726234ac9ac441e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Healthcare Measures"
-              }
-            },
-            "Property": "No Shows"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4dc334449071d0480eb1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Healthcare Measures"
-              }
-            },
-            "Property": "No Show Rate"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "48a10345d1775b639c50",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Healthcare Measures"
-              }
-            },
-            "Property": "Total Appointments"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a4c79906071b0e200d06",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Healthcare Measures"
-              }
-            },
-            "Property": "Completed Appointments"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

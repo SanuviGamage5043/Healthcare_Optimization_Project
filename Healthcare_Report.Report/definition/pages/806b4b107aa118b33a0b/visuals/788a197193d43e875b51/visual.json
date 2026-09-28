@@ -4,10 +4,10 @@
   "position": {
     "x": 64,
     "y": 717,
-    "z": 6,
+    "z": 6000,
     "height": 216,
     "width": 912,
-    "tabOrder": 6
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -111,42 +111,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5d0c55c10cce8b4c9b55",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "gold_fact_appointments"
-                  }
-                },
-                "Property": "appointment_hour"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a458f6f5972378c0ee10",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Healthcare Measures"
-              }
-            },
-            "Property": "No Shows"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
