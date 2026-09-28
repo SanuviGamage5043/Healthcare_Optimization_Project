@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "e569c240004160009ebd",
+  "name": "557350d70579c080d82e",
   "position": {
-    "x": 106.00779875081956,
-    "y": 116.60857862590152,
+    "x": 216.2559094516719,
+    "y": 114.48842265088513,
     "z": 1000,
-    "height": 89.046550950688427,
-    "width": 1706.7255598881948,
+    "height": 103.88764277580316,
+    "width": 1488.3494944615065,
     "tabOrder": 1000
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "Healthcare Measures"
                     }
                   },
-                  "Property": "Total Predictions"
+                  "Property": "Forecasted Appointments"
                 }
               },
-              "queryRef": "Healthcare Measures.Total Predictions",
-              "nativeQueryRef": "Total Predictions"
+              "queryRef": "Healthcare Measures.Forecasted Appointments",
+              "nativeQueryRef": "Forecasted Appointments"
             },
             {
               "field": {
@@ -37,11 +37,11 @@
                       "Entity": "Healthcare Measures"
                     }
                   },
-                  "Property": "High Risk Appointments"
+                  "Property": "Average Daily Forecast"
                 }
               },
-              "queryRef": "Healthcare Measures.High Risk Appointments",
-              "nativeQueryRef": "High Risk Appointments"
+              "queryRef": "Healthcare Measures.Average Daily Forecast",
+              "nativeQueryRef": "Average Daily Forecast"
             },
             {
               "field": {
@@ -51,11 +51,12 @@
                       "Entity": "Healthcare Measures"
                     }
                   },
-                  "Property": "Average Predicted Risk"
+                  "Property": "Maximum Forecasted Demand"
                 }
               },
-              "queryRef": "Healthcare Measures.Average Predicted Risk",
-              "nativeQueryRef": "Average Predicted Risk"
+              "queryRef": "Healthcare Measures.Maximum Forecasted Demand",
+              "nativeQueryRef": "Peak Forecast Demand",
+              "displayName": "Peak Forecast Demand"
             },
             {
               "field": {
@@ -65,25 +66,11 @@
                       "Entity": "Healthcare Measures"
                     }
                   },
-                  "Property": "No Show Rate"
+                  "Property": "Forecast Days"
                 }
               },
-              "queryRef": "Healthcare Measures.No Show Rate",
-              "nativeQueryRef": "No Show Rate"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Healthcare Measures"
-                    }
-                  },
-                  "Property": "Selected ML Model"
-                }
-              },
-              "queryRef": "Healthcare Measures.Selected ML Model",
-              "nativeQueryRef": "Selected ML Model"
+              "queryRef": "Healthcare Measures.Forecast Days",
+              "nativeQueryRef": "Forecast Days"
             }
           ]
         }
@@ -98,7 +85,7 @@
                     "Entity": "Healthcare Measures"
                   }
                 },
-                "Property": "Total Predictions"
+                "Property": "Forecasted Appointments"
               }
             },
             "direction": "Descending"
@@ -111,6 +98,13 @@
       "value": [
         {
           "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "22D"
+                }
+              }
+            },
             "horizontalAlignment": {
               "expr": {
                 "Literal": {
@@ -134,21 +128,7 @@
             }
           },
           "selector": {
-            "metadata": "Healthcare Measures.Total Predictions"
-          }
-        },
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Healthcare Measures.High Risk Appointments"
+            "metadata": "Healthcare Measures.Forecasted Appointments"
           }
         }
       ],
@@ -158,7 +138,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "16D"
                 }
               }
             }

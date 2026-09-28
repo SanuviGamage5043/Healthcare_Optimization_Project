@@ -23,4 +23,5 @@ ref table 'Healthcare Measures'
 ref table gold_fact_doctor_capacity
 ref table gold_ml_no_show_predictions
 ref table ml_model_evaluation
+ref table gold_ml_demand_forecast
 

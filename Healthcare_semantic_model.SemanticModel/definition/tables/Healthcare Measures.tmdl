@@ -179,6 +179,38 @@ table 'Healthcare Measures'
 			"Random Forest"
 		lineageTag: 006d2386-9503-4d46-a2e6-5ce5dc5a86a6
 
+	measure 'Forecasted Appointments' =
+			
+			SUM(
+			    gold_ml_demand_forecast[predicted_appointments]
+			)
+		formatString: 0
+		lineageTag: 4b12c307-ada5-428a-81e4-53d08c943c38
+
+	measure 'Average Daily Forecast' =
+			
+			AVERAGE(
+			    gold_ml_demand_forecast[predicted_appointments]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: fefffc07-aa3c-43a0-8cd0-369224c9c191
+
+	measure 'Maximum Forecasted Demand' =
+			
+			MAX(
+			    gold_ml_demand_forecast[predicted_appointments]
+			)
+		formatString: 0
+		lineageTag: 4773d726-4df3-440c-acda-e427707d0348
+
+	measure 'Forecast Days' =
+			
+			DISTINCTCOUNT(
+			    gold_ml_demand_forecast[forecast_date]
+			)
+		formatString: 0
+		lineageTag: c94c220f-e507-413a-a83d-f9f9b846036e
+
 	column Value
 		isHidden
 		formatString: 0

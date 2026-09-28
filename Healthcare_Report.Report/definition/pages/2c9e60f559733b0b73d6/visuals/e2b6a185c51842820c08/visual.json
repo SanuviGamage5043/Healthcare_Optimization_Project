@@ -1,0 +1,195 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "e2b6a185c51842820c08",
+  "position": {
+    "x": 1178.8067221091135,
+    "y": 485.51571827875358,
+    "z": 1004,
+    "height": 231.09700127678664,
+    "width": 578.80258117947483,
+    "tabOrder": 1004
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_ml_demand_forecast"
+                    }
+                  },
+                  "Property": "forecast_date"
+                }
+              },
+              "queryRef": "gold_ml_demand_forecast.forecast_date",
+              "nativeQueryRef": "forecast_date"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gold_ml_demand_forecast"
+                        }
+                      },
+                      "Property": "predicted_appointments"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(gold_ml_demand_forecast.predicted_appointments)",
+              "nativeQueryRef": "predicted_appointments",
+              "displayName": "predicted_appointments"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_ml_demand_forecast"
+                    }
+                  },
+                  "Property": "model_name"
+                }
+              },
+              "queryRef": "gold_ml_demand_forecast.model_name",
+              "nativeQueryRef": "model_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gold_ml_demand_forecast"
+                    }
+                  },
+                  "Property": "model_version"
+                }
+              },
+              "queryRef": "gold_ml_demand_forecast.model_version",
+              "nativeQueryRef": "model_version"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Daily Appointment Demand Forecast'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "dcb61d66245cb0342460",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_ml_demand_forecast"
+              }
+            },
+            "Property": "forecast_date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c2ddd412a8095a611e01",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "gold_ml_demand_forecast"
+                  }
+                },
+                "Property": "predicted_appointments"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c9867af7026c18d85004",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_ml_demand_forecast"
+              }
+            },
+            "Property": "model_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "93efe190631b00442254",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_ml_demand_forecast"
+              }
+            },
+            "Property": "model_version"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

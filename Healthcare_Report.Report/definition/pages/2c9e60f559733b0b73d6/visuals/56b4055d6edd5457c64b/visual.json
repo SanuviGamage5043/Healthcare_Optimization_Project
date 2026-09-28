@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "2f2fdd2f39865609ee10",
+  "name": "56b4055d6edd5457c64b",
   "position": {
-    "x": 1418.3843472859658,
-    "y": 860.78332585665476,
-    "z": 10000,
-    "height": 95.4070188757376,
-    "width": 481.27540632872081,
-    "tabOrder": 10000
+    "x": 928.62831705717929,
+    "y": 826.86083025639255,
+    "z": 1005,
+    "height": 103.88764277580316,
+    "width": 812.0197384312778,
+    "tabOrder": 1005
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold_ml_no_show_predictions"
+                      "Entity": "gold_ml_demand_forecast"
                     }
                   },
-                  "Property": "appointment_date"
+                  "Property": "forecast_date"
                 }
               },
-              "queryRef": "gold_ml_no_show_predictions.appointment_date",
-              "nativeQueryRef": "appointment_date",
+              "queryRef": "gold_ml_demand_forecast.forecast_date",
+              "nativeQueryRef": "forecast_date",
               "active": true
             }
           ]
@@ -40,10 +40,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "gold_ml_no_show_predictions"
+                    "Entity": "gold_ml_demand_forecast"
                   }
                 },
-                "Property": "appointment_date"
+                "Property": "forecast_date"
               }
             },
             "direction": "Ascending"
@@ -69,10 +69,17 @@
       "header": [
         {
           "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Appointment Date'"
+                  "Value": "'Forecast Date'"
                 }
               }
             }
@@ -81,5 +88,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6b2ec34bd6c6d0eb3bcb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_ml_demand_forecast"
+              }
+            },
+            "Property": "forecast_date"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

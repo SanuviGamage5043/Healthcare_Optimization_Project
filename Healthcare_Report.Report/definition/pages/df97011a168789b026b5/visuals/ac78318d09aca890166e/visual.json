@@ -4,10 +4,10 @@
   "position": {
     "x": 254.41871700196694,
     "y": 449.4730667034749,
-    "z": 2002,
+    "z": 4000,
     "height": 180.21325787639324,
     "width": 1454.4269988612443,
-    "tabOrder": 2002
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -134,56 +134,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "cbd5622f0d4b3157bc30",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_dim_department"
-              }
-            },
-            "Property": "department_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "97a818c022d06357409a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_ml_no_show_predictions"
-              }
-            },
-            "Property": "risk_category"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "76dd6cb0a755b9bbe1b0",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "gold_ml_no_show_predictions"
-                  }
-                },
-                "Property": "appointment_id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

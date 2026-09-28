@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "MLExperiment",
+    "displayName": "06_ML_Appointment_Demand_Forecasting"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "cb598727-ec4e-abd8-4188-4f95c1712196"
+  }
+}

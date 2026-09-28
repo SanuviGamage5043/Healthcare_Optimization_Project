@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "038fb5e67481bbccb6d4",
+  "name": "d16f57cc09d62600dd38",
   "position": {
-    "x": 42.403119500327826,
-    "y": 646.64757237999925,
-    "z": 5000,
-    "height": 150.53107422616378,
-    "width": 918.02753718209738,
-    "tabOrder": 5000
+    "x": 116.60857862590152,
+    "y": 237.45746920183581,
+    "z": 1002,
+    "height": 231.09700127678664,
+    "width": 1719.4464957382932,
+    "tabOrder": 1002
   },
   "visual": {
-    "visualType": "columnChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,33 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold_ml_no_show_predictions"
+                      "Entity": "gold_ml_demand_forecast"
                     }
                   },
-                  "Property": "appointment_type"
+                  "Property": "forecast_date"
                 }
               },
-              "queryRef": "gold_ml_no_show_predictions.appointment_type",
-              "nativeQueryRef": "appointment_type",
+              "queryRef": "gold_ml_demand_forecast.forecast_date",
+              "nativeQueryRef": "forecast_date",
               "active": true
-            }
-          ]
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "gold_ml_no_show_predictions"
-                    }
-                  },
-                  "Property": "risk_category"
-                }
-              },
-              "queryRef": "gold_ml_no_show_predictions.risk_category",
-              "nativeQueryRef": "risk_category"
             }
           ]
         },
@@ -59,17 +41,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "gold_ml_no_show_predictions"
+                          "Entity": "gold_ml_demand_forecast"
                         }
                       },
-                      "Property": "appointment_id"
+                      "Property": "predicted_appointments"
                     }
                   },
-                  "Function": 5
+                  "Function": 0
                 }
               },
-              "queryRef": "CountNonNull(gold_ml_no_show_predictions.appointment_id)",
-              "nativeQueryRef": "Count of appointment_id"
+              "queryRef": "Sum(gold_ml_demand_forecast.predicted_appointments)",
+              "nativeQueryRef": "Sum of predicted_appointments"
             }
           ]
         }
@@ -78,21 +60,16 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Column": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "gold_ml_no_show_predictions"
-                      }
-                    },
-                    "Property": "appointment_id"
+                  "SourceRef": {
+                    "Entity": "gold_ml_demand_forecast"
                   }
                 },
-                "Function": 5
+                "Property": "forecast_date"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ],
         "isDefaultSort": true
@@ -105,7 +82,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Risk by Appointment Type'"
+                  "Value": "'Predicted Appointment Demand - Next 14 Days'"
                 }
               }
             },
@@ -134,5 +111,42 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b3acf060100080417c85",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_ml_demand_forecast"
+              }
+            },
+            "Property": "forecast_date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f7f071d0db712d349ac9",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "gold_ml_demand_forecast"
+                  }
+                },
+                "Property": "predicted_appointments"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

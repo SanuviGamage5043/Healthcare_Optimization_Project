@@ -4,10 +4,10 @@
   "position": {
     "x": 44.523275475344214,
     "y": 947.70972083232687,
-    "z": 2007,
+    "z": 9000,
     "height": 76.325615100590085,
     "width": 400.70947927809794,
-    "tabOrder": 2007
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -63,23 +63,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8bab7ea4d7d19707703b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_ml_no_show_predictions"
-              }
-            },
-            "Property": "appointment_type"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

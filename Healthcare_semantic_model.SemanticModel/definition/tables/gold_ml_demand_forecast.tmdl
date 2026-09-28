@@ -1,0 +1,59 @@
+table gold_ml_demand_forecast
+	lineageTag: 90cc9dfa-7d48-4458-954e-952106e8ced2
+	sourceLineageTag: [dbo].[gold_ml_demand_forecast]
+
+	column forecast_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2b4cc854-ca37-4388-8e14-b62ad610b7c1
+		sourceLineageTag: forecast_date
+		summarizeBy: none
+		sourceColumn: forecast_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column predicted_appointments
+		dataType: int64
+		formatString: 0
+		lineageTag: d79ed678-91e1-40f5-a03b-989b5c900303
+		sourceLineageTag: predicted_appointments
+		summarizeBy: sum
+		sourceColumn: predicted_appointments
+
+		annotation SummarizationSetBy = Automatic
+
+	column model_name
+		dataType: string
+		lineageTag: 11d1cfef-58b3-4fe8-a097-3a8a454a140c
+		sourceLineageTag: model_name
+		summarizeBy: none
+		sourceColumn: model_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column model_version
+		dataType: string
+		lineageTag: a4edf76a-7f48-48d0-aea3-94c496eecf63
+		sourceLineageTag: model_version
+		summarizeBy: none
+		sourceColumn: model_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column prediction_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b19affbf-fe53-416b-92ad-3ce39987f813
+		sourceLineageTag: prediction_date
+		summarizeBy: none
+		sourceColumn: prediction_date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_ml_demand_forecast = entity
+		mode: directLake
+		source
+			entityName: gold_ml_demand_forecast
+			schemaName: dbo
+			expressionSource: 'DirectLake - Healthcare_Lakehouse'
+

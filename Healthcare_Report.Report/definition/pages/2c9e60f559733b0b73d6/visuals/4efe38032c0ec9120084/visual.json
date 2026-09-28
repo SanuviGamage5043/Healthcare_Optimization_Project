@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "b66c6142d733a0b909b7",
+  "name": "4efe38032c0ec9120084",
   "position": {
-    "x": 960.43065668242514,
-    "y": 648.76772835501572,
-    "z": 6000,
-    "height": 151,
-    "width": 918,
-    "tabOrder": 6000
+    "x": 175.97294592636047,
+    "y": 485.51571827875358,
+    "z": 1001,
+    "height": 231.09700127678664,
+    "width": 875.6244176817695,
+    "tabOrder": 1001
   },
   "visual": {
     "visualType": "lineChart",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold_ml_no_show_predictions"
+                      "Entity": "gold_dim_date"
                     }
                   },
-                  "Property": "appointment_hour"
+                  "Property": "date"
                 }
               },
-              "queryRef": "gold_ml_no_show_predictions.appointment_hour",
-              "nativeQueryRef": "appointment_hour",
+              "queryRef": "gold_dim_date.date",
+              "nativeQueryRef": "date",
               "active": true
             }
           ]
@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "gold_ml_no_show_predictions"
-                        }
-                      },
-                      "Property": "no_show_probability"
+                    "SourceRef": {
+                      "Entity": "Healthcare Measures"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total Appointments"
                 }
               },
-              "queryRef": "Sum(gold_ml_no_show_predictions.no_show_probability)",
-              "nativeQueryRef": "Sum of no_show_probability"
+              "queryRef": "Healthcare Measures.Total Appointments",
+              "nativeQueryRef": "Total Appointments"
             }
           ]
         }
@@ -60,21 +55,16 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Column": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "gold_ml_no_show_predictions"
-                      }
-                    },
-                    "Property": "no_show_probability"
+                  "SourceRef": {
+                    "Entity": "gold_dim_date"
                   }
                 },
-                "Function": 0
+                "Property": "date"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ],
         "isDefaultSort": true
@@ -87,7 +77,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Risk by Appointment Hour'"
+                  "Value": "'Historical Appointment Demand'"
                 }
               }
             },
@@ -116,5 +106,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a0bdabdb6e08d6423496",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "gold_dim_date"
+              }
+            },
+            "Property": "date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "eb5a2f5638d94490e5b1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Healthcare Measures"
+              }
+            },
+            "Property": "Total Appointments"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

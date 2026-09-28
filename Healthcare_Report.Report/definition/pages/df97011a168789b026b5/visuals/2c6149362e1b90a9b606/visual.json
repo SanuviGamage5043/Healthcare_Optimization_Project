@@ -4,10 +4,10 @@
   "position": {
     "x": 960.43065668242514,
     "y": 222.61637737672106,
-    "z": 2001,
+    "z": 3000,
     "height": 205.65512957658993,
     "width": 623.325856654819,
-    "tabOrder": 2001
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "donutChart",
@@ -116,42 +116,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "84db094947d3716a4b14",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "gold_ml_no_show_predictions"
-              }
-            },
-            "Property": "risk_category"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "2a0dacb0c3369bc0c0ce",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "gold_ml_no_show_predictions"
-                  }
-                },
-                "Property": "appointment_id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
