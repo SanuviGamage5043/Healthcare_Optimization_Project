@@ -268,10 +268,10 @@ ML        Forecast ML
 ### Pipeline Notebooks
 
 ```text
-01_Data_Generation
-02_Bronze
-03_Silver
-04_Gold
+01_Generate_Data
+02_Bronze_Ingestion
+03_Silver_Transformation
+04_Gold_Analytics
 05_ML_No_Show_Prediction
 06_ML_Appointment_Demand_Forecasting
 ```
@@ -593,10 +593,10 @@ Slicers include:
 healthcare-data-engineering/
 │
 ├── notebooks/
-│   ├── 01_Data_Generation.ipynb
-│   ├── 02_Bronze.ipynb
-│   ├── 03_Silver.ipynb
-│   ├── 04_Gold.ipynb
+│   ├── 01_Generate_Data.ipynb
+│   ├── 02_Bronze_Ingestion.ipynb
+│   ├── 03_Silver_Transformation.ipynb
+│   ├── 04_Gold_Analytics.ipynb
 │   ├── 05_ML_No_Show_Prediction.ipynb
 │   └── 06_ML_Appointment_Demand_Forecasting.ipynb
 │
